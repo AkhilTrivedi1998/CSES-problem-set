@@ -64,7 +64,8 @@ int main(){
 		int u = edge.ss.ff, v = edge.ss.ss;
 		ll w = edge.ff;
 		if(dist[u] != INF && dist[v] > dist[u] + w){
-			vis[v] = 1;
+			if(!vis[u])
+				vis[v] = 1;
 		}
 	}
 	dfs1(0);
